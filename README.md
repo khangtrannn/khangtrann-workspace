@@ -7,3 +7,13 @@ ng g application example-app --prefix mktrann --routing --style=scss --strict --
 ```bash
 ng lint
 ```
+
+## ng update
+```bash
+ng g @angular/core:control-flow
+```
+
+## Component library and styles utils
+- Angular Material
+- PrimeNG
+- Taiga UI

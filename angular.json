@@ -7,6 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+          "standalone": true,
           "changeDetection": "OnPush",
           "style": "scss",
           "displayBlock": true
@@ -112,7 +113,9 @@
   "cli": {
     "analytics": false,
     "schematicCollections": [
-      "@angular-eslint/schematics"
+      "@angular-eslint/schematics",
+      "@schematics/angular",
+      "@ngrx/schematics"
     ]
   }
 }
