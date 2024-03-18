@@ -11,7 +11,8 @@
     "format:write": "prettier --write \"./projects/**/*.{ts,html,scss,json}\"",
     "analyze": "ng build --stats-json --output-hashing none --named-chunks && esbuild-visualizer --template treemap --metadata dist/example-app/stats.json --filename dist/example-app/analyze/index.html && http-server -o -c-1 ./dist/example-app/analyze/",
     "analyze:sme": "ng build --source-map --output-hashing none --named-chunks && source-map-explorer dist/example-app/browser/*.js --html dist/example-app/sme/index.html && http-server -o -c-1 ./dist/example-app/sme/",
-    "analyze:deps": "madge projects/example-app/src/main.ts --ts-config tsconfig.json --image ./example-app-dep-graph.png"
+    "analyze:deps": "madge projects/example-app/src/main.ts --ts-config tsconfig.json --image ./example-app-dep-graph.png",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -29,10 +30,18 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.0",
+    "@angular-eslint/builder": "17.3.0",
+    "@angular-eslint/eslint-plugin": "17.3.0",
+    "@angular-eslint/eslint-plugin-template": "17.3.0",
+    "@angular-eslint/schematics": "17.3.0",
+    "@angular-eslint/template-parser": "17.3.0",
     "@angular/cli": "^17.3.0",
     "@angular/compiler-cli": "^17.3.0",
     "@types/jasmine": "~5.1.0",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
     "esbuild-visualizer": "^0.6.0",
+    "eslint": "^8.57.0",
     "http-server": "^14.1.1",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
