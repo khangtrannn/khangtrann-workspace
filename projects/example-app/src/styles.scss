@@ -11,7 +11,6 @@
 $my-org-blue-palette: (
   // should be same as in tailwind.config.js
   50: #eff6ff,
-  // more on that in the next section .
   100: #dbeafe,
   200: #bfdbfe,
   300: #93c5fd,
@@ -38,11 +37,12 @@ $my-org-blue-palette: (
 $example-app-primary: mat.define-palette(
   $my-org-blue-palette,
   // use the custom palette
-  700,
   // default shade
-  600,
+  700,
   // lighter shade
-  900 // darker shade
+  600,
+  // darker shade
+  900
 );
 // Angular Material palettes (out of the box)
 $example-app-accent: mat.define-palette(mat.$blue-palette, A400, A100, A700);
@@ -75,6 +75,10 @@ $example-app-theme: mat.define-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($example-app-theme);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
 
